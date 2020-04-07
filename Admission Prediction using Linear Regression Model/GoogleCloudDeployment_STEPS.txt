@@ -1,0 +1,30 @@
+Steps to deploy in google cloud:
+Step-1: Create a python file with name main.py
+
+Step-2: Create a app.yaml file with the only content as -->    runtime: python37
+
+Step-3: Create a requirements.txt file with the following command --> pip freeze > requirements.txt
+
+Step-4: Go to https://cloud.google.com/ and create an account if already haven’t created one. Then go to the console of your account.
+
+Step-5: Go to IAM and admin(highlighted) and click manage resources
+
+Step-6: Click CREATE PROJECT to create a new project for deployment.
+
+Step-7: Once the project gets created, select App Engine and select Dashboard
+
+Step-8: Go to https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe to download the google cloud SDK to your machine.
+
+Step-9: Open cmd and move to your project folder and type     >>gcloud init      to initialise the gcloud context
+
+Step-10: It'll then ask you to login through the link provided in the cmd through an email id in the googlecloud 
+
+Step-11: After this you'll be asked to choose the project out of a list of projects.
+
+Step-12: After this type the following command     >>gcloud app deploy app.yaml --project project_name_you_have_chosen_above
+
+Step-13: After executing the above command, GCP will ask you to enter the region for your application. If you are from India select [4]
+
+Step-14: GCP will ask for the services to be deployed. Enter ‘y’ to deploy the services.
+
+Step-15: And then it will give you the link for your app
